@@ -4,7 +4,6 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    /* outline: 5px solid rgba(255,0,0,0.3); */
 }
 
 body{
@@ -13,8 +12,11 @@ body{
   font-family: Helvetica, Arial, san-serif;
 }
 
+
+
+/* hero section */
+
 .hero {
-    /* border: 1px solid red; */
     min-height: 70vh;
     height: auto;
     background: url(images/US-en-20220815-popsignuptwoweeks-perspective_alpha_website_large.jpg) center center/cover;
@@ -107,6 +109,12 @@ img {
   z-index: 2;
 }
 
+
+
+
+
+/* moving elements */
+
 .videoing video {
   width: 75%;
   margin-left: -88%;
@@ -174,6 +182,12 @@ img {
   z-index: 1;
 }
 
+
+
+
+
+/* buttons and email */
+
 .btn {
   background-color: #e50914;
   background-image: linear-gradient(180deg, #e50914, #de0510);
@@ -238,6 +252,12 @@ img {
   border-left: 1px solid #333;
 }
 
+
+
+
+
+/* split sections and display flex */
+
 .left, .right{
   flex-basis: 40%;
   padding: 1em;
@@ -249,6 +269,13 @@ img {
   padding: 1em;
   margin: auto 0;
 }
+
+
+
+
+
+
+/* faq section, accordion */
 
 .faq {
     display:flex;
@@ -316,6 +343,11 @@ span {
 
 
 
+
+
+
+/* footer links */
+
 .bottom {
   max-width: 1100px;
   margin: 0 auto;
@@ -346,6 +378,13 @@ footer .footer-link-item a {
   color: #737373;
   text-decoration: none;
 }
+
+
+
+
+
+
+/* shrinking */
 
 @media (min-width: 716px) and (max-width:768px) {
   .video2 video {
