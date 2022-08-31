@@ -15,7 +15,8 @@ body{
 
 .hero {
     /* border: 1px solid red; */
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
     background: url(images/US-en-20220815-popsignuptwoweeks-perspective_alpha_website_large.jpg) center center/cover;
     position: relative;
     width:100%;
@@ -103,8 +104,75 @@ section {
 
 img {
   max-width: 100%;
+  z-index: 2;
 }
 
+.videoing video {
+  width: 75%;
+  margin-left: -88%;
+  margin-top: -4%;
+  z-index: 1;
+}
+
+.videoing {
+  align-items: center;
+  display: flex;
+}
+
+.overlay {
+  align-items: center;
+  display: flex;
+}
+
+.downloading {
+  align-items: center;
+  background-color: #000;
+  padding: 8px;
+  border: 2px solid #333;
+  border-radius: .75em;
+  width: 55%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -78%;
+  margin-top: 60%;
+  z-index: 20;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.downloading img {
+  width: 20%;
+  margin: auto 1%;
+}
+
+.downloading p {
+  margin: 1%;
+}
+
+.block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.blue {
+  color: blue;
+}
+
+
+.video2 {
+  align-items: center;
+  display: flex;
+}
+
+
+.video2 video {
+  width: 61%;
+  margin-left: -81%;
+  margin-top: -30%;
+  z-index: 1;
+}
 
 .btn {
   background-color: #e50914;
@@ -186,33 +254,76 @@ img {
     display:flex;
     flex-direction: column;
   align-items: center;
-  height: 90vh;
+  height: auto;
 }
 
-.gray {
-  display: flex;
+.faq li button {
+  display: block;
+  width: 100%;
+  padding: 1%;
+}
+
+.faq li button h3 {
+  text-align: left;
+  cursor: pointer;
+}
+
+span {
+  float: right;
+}
+
+.faq-list {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.inside {
+  max-height: 400px;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+  border-top: 2px solid black;
+}
+
+.inside.closed {
+  max-height: 0;
+  border: none;
+}
+
+
+.faq-question {
+  background: #222;
+  width: 100%;
+  color: white;
+  font-size: 1.2em;
+}
+
+.plus {
+  transform: rotate(-45deg);
+}
+
+
+.list-item {
+  list-style: none;
   width: 60%;
   background: #222;
-  padding: 1%;
-  margin: 10px;
+  color: white;
+  margin: 7px;
   justify-content: space-between;
   font-size: 1.25em;
 }
 
 
+
 .bottom {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  width: 65%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.questions {
-  margin-left: 18%;
-}
 
 .english {
-  width: 100%;
+  width: 24%;
   margin-left: 0;
   margin-bottom: 10px;
 }
@@ -221,13 +332,57 @@ img {
   text-align: center;
 }
 
+footer ul {
+  list-style: none;
+}
 
-@media only screen and (max-width: 900px) {
+footer .footer-link-item {
+  display: inline-block;
+  width: 24.5%;
+}
+
+footer .footer-link-item a {
+  padding: 5px;
+  color: #737373;
+  text-decoration: none;
+}
+
+@media (min-width: 716px) and (max-width:768px) {
+  .video2 video {
+    width: 56%;
+    margin-left: -74.5%;
+    margin-top: -27%;
+  }
+  
+  .videoing video {
+    width: 69%;
+    margin-left: -81%;
+    margin-top: -4%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width:1068px) {
+  .downloading {
+    font-size: 0.75em;
+  }
+}
+
+
+@media (max-width: 768px) {
   section {
     height: auto;
     flex-direction: column;
     text-align: center;
     overflow: hidden;
+  }
+
+  section .right-text {
+    order: 1;
+  }
+
+  section .left {
+    order: 2;
   }
 
   h1 {
@@ -238,7 +393,24 @@ img {
     height: auto;
   }
 
+  .hero .text h1 {
+    font-size:2rem;
+}
+  .hero .text h2 {
+    font-size:1.8rem;
+}
+
+
   .gray {
+    width: 85%;
+    font-size: 1em;
+  }
+
+  .faq li button h3 {
+    font-size: 0.65em;
+  }
+
+  .inside {
     width: 85%;
     font-size: 1em;
   }
@@ -258,6 +430,9 @@ img {
     min-height: 30px;
     line-height: 30px;
     min-width: 150px;
+  }
+  footer .footer-link-item {
+    width: 32.5%;
   }
 
 
